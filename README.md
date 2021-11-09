@@ -13,5 +13,8 @@ https://www.w3schools.com/js/default.asp
 JavaScript - Digital Innovation One
 https://web.dio.me/browse?filter=JavaScript
 
+JavaScript Programming - Full Course
+https://www.youtube.com/watch?v=jS4aFq5-91M&t=21s
+
 The Complete JavaScript Course 2021: From Zero to Expert! por Jonas Schmedtmann
 https://www.udemy.com/course/the-complete-javascript-course/
