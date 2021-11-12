@@ -28,3 +28,16 @@ Test data:
 § Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
 
 */
+
+//Solução
+
+let dolphinsPoints = [96, 108, 89];
+let koalasPoints = [88, 91, 110];
+
+let calcDolphinsAveragePoints = (dolphinsPoints[0] + dolphinsPoints[1] + dolphinsPoints[2]) / 3;
+let calcKoalasAveragePoints = (koalasPoints[0] + koalasPoints[1] + koalasPoints[2]) / 3;
+
+console.log(`Dolphins have done ${calcDolphinsAveragePoints} average points.
+Koalas ${calcKoalasAveragePoints} average points`);
+
+//Comparação
