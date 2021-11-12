@@ -37,7 +37,17 @@ let koalasPoints = [88, 91, 110];
 let calcDolphinsAveragePoints = (dolphinsPoints[0] + dolphinsPoints[1] + dolphinsPoints[2]) / 3;
 let calcKoalasAveragePoints = (koalasPoints[0] + koalasPoints[1] + koalasPoints[2]) / 3;
 
-console.log(`Dolphins have done ${calcDolphinsAveragePoints} average points.
-Koalas ${calcKoalasAveragePoints} average points`);
+console.log(`Dolphins have scored ${calcDolphinsAveragePoints} average points.
+Koalas have scored ${calcKoalasAveragePoints} average points`);
 
 //Comparação
+
+if (calcDolphinsAveragePoints > calcKoalasAveragePoints && calcDolphinsAveragePoints >= 100){
+    console.log(`Dolphins score ${calcDolphinsAveragePoints} and win the match!`);
+} else if (calcKoalasAveragePoints > calcDolphinsAveragePoints && calcDolphinsAveragePoints  >= 100) {
+    console.log(`Koalas scorre ${calcKoalasAveragePoints} and win the match!`);
+} else {
+    console.log("No one reached the minimum score of 100!");
+}
+
+//Todas as condições foram satisfeitas
