@@ -58,3 +58,18 @@ Your tasks:
 2. Use a template literal to include the BMI values in the outputs. Example: "Mark's BMI (28.3) is higher than John's (23.9)!"
 
 */
+
+// Solução
+
+if (calcImcMark > calcImcJohn){ //ou vice-versa
+    console.log(`Mark's BMI is higher than John's`);
+} else if (calcImcJohn > calcImcMark) {
+    console.log(`John's BMI is higher than Mark's`);
+} else {
+    console.log('Invalid values');
+}
+
+//template literals
+
+console.log(`Mark has ${calcImcMark} and John has ${calcImcJohn}`);
+console.log(`Mark's BMI ${calcImcMark} is ${calcImcMark > calcImcJohn ? 'Higher' : 'Lower'} than John`);
