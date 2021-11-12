@@ -2,6 +2,9 @@
 # JavaScript
 Time-line do meu aprendizado com JavaScript.
 
+# Desafios
+Essa parte tem como objetivo alguns exercícios como parte do meu aprendizado. 
+
 # Referências
 
 MDN - JavaScript
