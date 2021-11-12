@@ -28,3 +28,21 @@ m tall.
 */
 
 //Solução
+
+const markMass = 78;
+const markHeight = 1.69;
+
+const johnMass = 92;
+const johnHeight = 1.95;
+
+
+
+const calcImcMark = markMass / (markHeight) ** 2;
+const calcImcJohn = johnMass / (johnHeight * johnHeight);
+
+let higherImc = calcImcMark > calcImcJohn;
+
+//se Mark tem maior IMC que John ou vice-versa
+console.log(higherImc);
+//mostrando o calculo no console
+console.log(calcImcMark, calcImcJohn);
