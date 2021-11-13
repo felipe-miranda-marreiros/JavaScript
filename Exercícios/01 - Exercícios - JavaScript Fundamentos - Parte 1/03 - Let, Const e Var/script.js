@@ -10,9 +10,9 @@ assign their values according to your own country (population in millions)
 
 const country = 'Brazil';
 const continent = 'South America';
-const population = 212.6;
+let population = 212.6;
 const isIsland = false;
-let language;
+const language = 'Portuguese';
 
 console.log(country, continent, population);
 
@@ -43,3 +43,5 @@ change, and which might change?). Then, change these variables to const.
 3. Try to change one of the changed variables now, and observe what happens
 
 */
+
+//Solução - linhas 13 e 15
