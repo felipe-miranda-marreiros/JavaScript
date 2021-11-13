@@ -85,3 +85,5 @@ using the template literal syntax
 
 */
 
+const descTemp = `${country} is in ${continent}, and its ${population} million people speak ${language}.`;
+console.log(descTemp);
