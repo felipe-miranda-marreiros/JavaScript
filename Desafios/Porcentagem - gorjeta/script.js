@@ -27,7 +27,7 @@ let dataTest = 275;
 let calcPerc1 = dataTest * (15 / 100);
 let calcPerc2 = dataTest * (20 / 100);
 
-let condition = dataTest >= 50 && dataTest <= 300 ? calcPerc2 : calcPerc1;
+let condition = dataTest >= 50 && dataTest <= 300 ? calcPerc1 : calcPerc2;
 
 let tip = `The bill is ${dataTest} and the tip is ${condition} so the total is ${dataTest + condition}`;
 
