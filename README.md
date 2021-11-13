@@ -3,7 +3,7 @@
 Time-line do meu aprendizado com JavaScript.
 
 # Desafios
-Essa parte tem como objetivo alguns exercícios que vão mudando de nível como parte do curso JavaScript Course 2021.
+Essa parte tem como objetivo alguns exercícios que vão mudando de nível como parte do JavaScript Course 2021.
 
 # Exercícios
 Exercícios de acordo com cada assunto estudado em JavaScript na mesma ordem de aprendizagem.
