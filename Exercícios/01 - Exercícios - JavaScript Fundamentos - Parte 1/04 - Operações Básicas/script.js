@@ -11,6 +11,7 @@ assign their values according to your own country (population in millions)
 const country = 'Brazil';
 const continent = 'South America';
 let population = 212.6;
+population++;
 const isIsland = false;
 const language = 'Portuguese';
 
@@ -62,3 +63,15 @@ which contains a string with this format: 'Portugal is in Europe, and its 11 mil
 people speak portuguese'
 
 */
+
+const split = (population / 2);
+console.log("Each side would have " + split + ' people');
+
+let finland_population = 6;
+console.log(finland_population > population);
+
+let avgPopulation = 33;
+console.log(population < avgPopulation);
+
+const description = (country + ' is in ' + continent + ', its ' + population + ' million people speak ' + language + '.');
+console.log(description);
