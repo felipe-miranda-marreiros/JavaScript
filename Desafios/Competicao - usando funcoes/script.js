@@ -27,3 +27,26 @@ Test data:
 § Data 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27
 
 */
+
+//Solução
+
+const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+
+
+const averagePointsDolphins = calcAverage(85, 54, 41);
+const averagePointsKoalas = calcAverage(23, 34, 27);
+
+console.log(averagePointsDolphins, averagePointsKoalas);
+
+const checkWinner = (averagePointsDolphins, averagePointsKoalas) => {
+ 
+    if(averagePointsDolphins >= 2 * averagePointsKoalas){
+        console.log(`Dolphins win ${averagePointsDolphins} vs. ${averagePointsKoalas}`);
+    } else if (averagePointsKoalas >= 2 * averagePointsDolphins){
+        console.log(`Koalas win ${averagePointsKoalas} vs. ${averagePointsDolphins}`);
+    } else {
+        console.log('No one wins the match!');
+    };
+    
+};
+checkWinner(averagePointsDolphins, averagePointsKoalas);
