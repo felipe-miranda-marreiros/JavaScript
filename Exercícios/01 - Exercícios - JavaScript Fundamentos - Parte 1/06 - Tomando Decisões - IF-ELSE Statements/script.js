@@ -101,3 +101,8 @@ minus the country's population)
 
 */
 
+if (population > avgPopulation){
+    console.log(`Brasil's population is ${population - avgPopulation} million above average.`);
+}else{
+    console.log(`Brasil's population is ${avgPopulation - population} million below average.`);
+}
