@@ -11,3 +11,11 @@ LECTURE: Type Conversion and Coercion
 2. Execute the operations to check if you were right
 
 */
+
+//Solução
+
+// a = 4;
+// b = 617;
+// c = 23;
+// d = false;
+// e = 1143;
