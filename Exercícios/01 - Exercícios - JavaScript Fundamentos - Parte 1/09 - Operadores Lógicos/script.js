@@ -16,3 +16,16 @@ change some variables in order to make the condition true (unless you live in
 Canada :D)
 
 */
+
+//Solução
+
+const country = 'Brazil';
+let population = 200;
+const language = 'English';
+const isIsland = false;
+
+if(language === 'English' && population < 50 && !isIsland){
+    console.log(`You should live in ${country}!`);
+} else {
+    console.log(`${country} does not meet your criteria`);
+}
