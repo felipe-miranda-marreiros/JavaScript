@@ -10,3 +10,9 @@ one word changes between these two sentences!
 130. See the different results, and set the population back to original
 
 */
+
+let brazilPopulation = 200;
+let avgPopulation = 33;
+const result = `Brazil's population is ${brazilPopulation > avgPopulation ? 'above' : 'below'} average.`;
+
+console.log(resultPopulation);
