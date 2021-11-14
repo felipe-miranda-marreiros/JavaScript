@@ -10,3 +10,11 @@ capital city is Helsinki'
 returned values in 3 different variables, and log them to the console
 
 */
+
+function describeCountry(country, population, capitalCity) {
+    return `${country} has ${population} million people and its capital city is ${capitalCity}.`;
+}
+
+console.log(describeCountry('Brazil', 200, 'Brasília'));
+console.log(describeCountry('Canada', 38, 'Ottawa'));
+console.log(describeCountry('France', 67, 'Paris' ));
