@@ -18,3 +18,16 @@ the same populations)
 
 */
 
+//declaration
+function percentageOfWorld1 (country, population){
+    return `${country} ${(population / 7900) * 100}`;
+}
+
+//expression
+const percentageOfWorld2 = function (population){
+    return (population / 7900) * 100;
+}
+
+console.log(percentageOfWorld1('China', 1441));
+console.log(percentageOfWorld1('Brazil', 200));
+console.log(percentageOfWorld1('France', 68));
