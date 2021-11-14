@@ -20,7 +20,7 @@ Canada :D)
 //Solução
 
 const country = 'Brazil';
-let population = 200;
+let population = 25;
 const language = 'English';
 const isIsland = false;
 
