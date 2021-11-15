@@ -82,3 +82,12 @@ world population for these 4 population values. Use the function
 percentage values
 
 */
+
+const population = [200, 67, 38, 1402];
+
+console.log(population);
+console.log(population.length === 4);
+
+const percentages = [percentageOfWorld3(population[0]), percentageOfWorld3(population[1]), percentageOfWorld3(population[2]), percentageOfWorld3(population[3])];
+
+console.log(percentages);
