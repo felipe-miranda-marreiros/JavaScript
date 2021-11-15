@@ -40,6 +40,6 @@ console.log(countryDescription);
 
 //data 2
 
-const countryDescription2 = `${myCountry['country']} has ${myCountry.population - 2} million ${myCountry.language}-speaking people, ${myCountry.neighbour.length} neighbouring countries and a capital called ${myCountry.capital}.`;
+const countryDescription2 = `${myCountry['country']} has ${myCountry['population'] + 2} million ${myCountry.language}-speaking people, ${myCountry.neighbour.length} neighbouring countries and a capital called ${myCountry.capital}.`;
 
 console.log(countryDescription2);
