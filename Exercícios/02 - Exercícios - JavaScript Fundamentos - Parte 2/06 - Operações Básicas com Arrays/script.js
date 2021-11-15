@@ -17,3 +17,14 @@ change the array at that index position. For example, you can search for
 
 */
 
+const neighbours = new Array ('Cuba', 'Argentina', 'Venezuela');
+
+neighbours.push('Utopia');
+neighbours.pop();
+
+neighbours[2] = 'Utopia';
+
+const check = neighbours.includes('Germany') ? 'Germany is one of the neighbour countries' : 'Probably not a central European country';
+
+console.log(check);
+console.log(neighbours);
