@@ -14,6 +14,7 @@ const myCountry = {
     country : 'Brazil',
     capital : 'Brasília', 
     language : 'Portuguese',
+    population : 200,
     neighbour : neighbours
 
 };
@@ -31,3 +32,8 @@ and a capital called Helsinki.'
 decrease it by two million using brackets notation.
 
 */
+
+//data 1
+const countryDescription = `${myCountry['country']} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbour.length} neighbouring countries and a capital called ${myCountry.capital}.`;
+
+console.log(countryDescription);
