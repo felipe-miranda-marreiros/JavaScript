@@ -7,3 +7,15 @@ properties 'country', 'capital', 'language', 'population' and
 
 */
 
+const neighbours = new Array ('Cuba', 'Argentina', 'Venezuela');
+
+const myCountry = {
+    
+    country : 'Brazil',
+    capital : 'Brasília', 
+    language : 'Portuguese',
+    neighbour : neighbours
+
+};
+
+console.log(myCountry);
