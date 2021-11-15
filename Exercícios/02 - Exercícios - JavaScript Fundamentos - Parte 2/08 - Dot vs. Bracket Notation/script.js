@@ -37,3 +37,9 @@ decrease it by two million using brackets notation.
 const countryDescription = `${myCountry['country']} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbour.length} neighbouring countries and a capital called ${myCountry.capital}.`;
 
 console.log(countryDescription);
+
+//data 2
+
+const countryDescription2 = `${myCountry['country']} has ${myCountry.population - 2} million ${myCountry.language}-speaking people, ${myCountry.neighbour.length} neighbouring countries and a capital called ${myCountry.capital}.`;
+
+console.log(countryDescription2);
