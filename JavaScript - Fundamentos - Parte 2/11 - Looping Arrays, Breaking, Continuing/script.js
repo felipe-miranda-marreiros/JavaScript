@@ -36,3 +36,14 @@ for(let i = 0; i < years.length; i++){
 }
 
 console.log(ages);
+
+//continue and break
+
+//No exemplo abaixo, vamos mostrar apenas strings no console usando continue.
+for(let i = 0; i < felipeArray.length; i++){ //começamos com 0 porque arrays são zero-based
+    if(typeof felipeArray[i] !== 'string') continue; //irá apenas mostrar strings
+
+    console.log(felipeArray[i], typeof felipeArray[i]);
+
+
+}
