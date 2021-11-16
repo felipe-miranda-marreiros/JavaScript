@@ -52,8 +52,8 @@ const higherBMI = (
 
     mark.calcBMI() > john.calcBMI() ?
 
-    `Mark's BMI ${mark.calcBMI()} is higher than John's ${john.calcBMI()}` : 
-    `John's BMI ${john.calcBMI()} is higher than Mark's ${mark.calcBMI()}`
+    `${mark.name} BMI ${mark.totalBMI} is higher than John's ${john.totalBMI}` : 
+    `${john.name} BMI ${john.totalBMI} is higher than Mark's ${mark.totalBMI}`
 
 );
 
