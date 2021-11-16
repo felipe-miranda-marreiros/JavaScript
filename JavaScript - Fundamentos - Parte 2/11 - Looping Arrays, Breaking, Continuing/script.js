@@ -23,3 +23,16 @@ for(let i = 0; i < felipeArray.length; i++){ //começamos com 0 porque arrays s�
 //podemos também duplicar uma array com base em outra array criando uma array vazia com base no felipeArray.
 
 console.log(replica);
+
+//Exemplo 2 - preenchendo uma array vazia
+
+//preenchendo uma array com for loop
+const years = [1991, 2007, 1969, 2020];
+
+const ages = [];
+
+for(let i = 0; i < years.length; i++){
+    ages.push (2037 - years[i]); //adicionamos push() pra adicionar os valores.
+}
+
+console.log(ages);
