@@ -47,3 +47,12 @@ for(let i = 0; i < felipeArray.length; i++){ //começamos com 0 porque arrays s�
 
 
 }
+//usando Break - assim que um número for achado na array, o loop para.
+
+for(let i = 0; i < felipeArray.length; i++){ //começamos com 0 porque arrays são zero-based
+    
+    if(typeof felipeArray[i] !== 'number') break;
+    console.log(felipeArray[i], typeof felipeArray[i]);
+
+
+}
