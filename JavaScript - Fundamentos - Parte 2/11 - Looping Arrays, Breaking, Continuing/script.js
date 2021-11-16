@@ -5,11 +5,12 @@ const felipeArray = [
     'Miranda',
     2021 - 1997,
     'Front-End',
-    ['Amanda', 'Jéssica','Liana']
+    ['Amanda', 'Jéssica','Liana'],
+    true
 ];
 
 for(let i = 0; i < felipeArray.length; i++){ //começamos com 0 porque arrays são zero-based
-    console.log(felipeArray[i]); //em vez de escrevermos a posição de cada elemento da array, usamos a variável.
+    console.log(felipeArray[i], typeof felipeArray[i]); //em vez de escrevermos a posição de cada elemento da array, usamos a variável.
 };
 //em vez de manualmente dizer quando o for loop deve parar, no caso do exemplo ele vai parar quando chegar em 5, podemos simplesmente usar a propriedade length.
 
