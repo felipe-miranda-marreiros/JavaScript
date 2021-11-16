@@ -31,8 +31,6 @@ let condition = dataTest >= 50 && dataTest <= 300 ? calcPerc1 : calcPerc2;
 
 let tip = `The bill is ${dataTest} and the tip is ${condition} so the total is ${dataTest + condition}`;
 
-console.log(tip);
-
 /*
 
 Steven is still building his tip calculator, using the same rules as before: Tip 15% of
@@ -54,3 +52,25 @@ the function you created before
 Test data: 125, 555 and 44
 
 */
+
+function calcTip (value) { //calcula a porcentagem
+
+    return value >= 50 && value <= 300 ? value * (15 / 100) : value * (20 / 100);
+};
+
+const bills = new Array (125, 555, 44); //array com dados do enunciado
+
+//calculando porcentagem usando função caclTip
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+
+console.log(tips);
+
+//total do valor da conta + gorjeta
+const total = [
+
+    tips[0] + bills[0],
+    tips[1] + bills[1],
+    tips[2] + bills[2]
+];
+
+console.log(total);
