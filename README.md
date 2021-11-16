@@ -8,6 +8,9 @@ Essa parte tem como objetivo alguns exercícios que vão mudando de nível como 
 # Exercícios
 Exercícios de acordo com cada assunto estudado em JavaScript na mesma ordem de aprendizagem.
 
+# Acessando
+Em cada pasta, existe arquivos com HTML, CSS e JavaScript. Basta conferir os arquivos com script.js.
+
 # Referências
 
 MDN - JavaScript
