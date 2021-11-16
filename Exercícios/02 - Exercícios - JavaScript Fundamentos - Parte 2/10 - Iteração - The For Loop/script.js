@@ -8,3 +8,6 @@ the console (for numbers 1 to 50): 'Voter number 1 is currently voting
 
 */
 
+for(let countVoters = 1; countVoters <= 50; countVoters++){
+    console.log(`Vote number ${countVoters} is currently voting`);
+};
