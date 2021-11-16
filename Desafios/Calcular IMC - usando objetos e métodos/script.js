@@ -1,81 +1,5 @@
 /*
 
-------------Coding Challenge #1------------------
-
-
-Mark and John are trying to compare their BMI (Body Mass Index), which is
-calculated using the formula:
-
-BMI = mass / height ** 2 = mass / (height * height) (mass in kg
-and height in meter).
-Your tasks:
-
-1. Store Mark's and John's mass and height in variables
-2. Calculate both their BMIs using the formula (you can even implement both
-versions)
-3. Create a Boolean variable 'markHigherBMI' containing information about
-whether Mark has a higher BMI than John.
-
-
-Test data:
-
-
-§ Data 1: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95
-m tall.
-§ Data 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76
-m tall.
-
-*/
-
-//Solução
-
-const markMass = 78;
-const markHeight = 1.69;
-
-const johnMass = 92;
-const johnHeight = 1.95;
-
-
-
-const calcImcMark = markMass / (markHeight) ** 2;
-const calcImcJohn = johnMass / (johnHeight * johnHeight);
-
-let higherImc = calcImcMark > calcImcJohn;
-
-//se Mark tem maior IMC que John ou vice-versa
-console.log(higherImc);
-//mostrando o calculo no console
-console.log(calcImcMark, calcImcJohn);
-
-// ----------------- Coding Challenge #2 --------------------
-
-/*
-Use the BMI example from Challenge #1, and the code you already wrote, and improve it.
-
-Your tasks:
-
-1. Print a nice output to the console, saying who has the higher BMI. The message is either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!"
-2. Use a template literal to include the BMI values in the outputs. Example: "Mark's BMI (28.3) is higher than John's (23.9)!"
-
-*/
-
-// Solução
-
-if (calcImcMark > calcImcJohn){ //ou vice-versa
-    console.log(`Mark's BMI is higher than John's`);
-} else if (calcImcJohn > calcImcMark) {
-    console.log(`John's BMI is higher than Mark's`);
-} else {
-    console.log('Invalid values');
-}
-
-//template literals
-
-console.log(`Mark has ${calcImcMark} and John has ${calcImcJohn}`);
-console.log(`Mark's BMI ${calcImcMark} is ${calcImcMark > calcImcJohn ? 'Higher' : 'Lower'} than John`);
-
-/*
-
 Coding Challenge #3
 
 Let's go back to Mark and John comparing their BMIs! This time, let's use objects to
@@ -96,3 +20,41 @@ tall.
 
 */
 
+const mark = {
+
+    name : 'Mark Miller',
+    mass : 78,
+    height : 1.69,
+
+    calcBMI() {
+
+        this.totalBMI = this.mass / (this.height ** 2);
+        return this.totalBMI;
+
+    }
+
+}
+const john = {
+
+    name : 'John Smith',
+    mass : 92,
+    height : 1.95,
+
+    calcBMI() {
+
+    this.totalBMI = this.mass / (this.height ** 2);
+    return this.totalBMI;
+
+    }
+}
+
+const higherBMI = (
+
+    mark.calcBMI() > john.calcBMI() ?
+
+    `Mark's BMI ${mark.calcBMI()} is higher than John's ${john.calcBMI()}` : 
+    `John's BMI ${john.calcBMI()} is higher than Mark's ${mark.calcBMI()}`
+
+);
+
+console.log(higherBMI);
