@@ -1,6 +1,6 @@
 ![alt text](https://cdn.iconscout.com/icon/free/png-256/javascript-2752148-2284965.png)
 # JavaScript
-Time-line do meu aprendizado com JavaScript.
+Timeline do meu aprendizado com JavaScript.
 
 # Desafios
 Essa parte tem como objetivo alguns exercícios que vão mudando de nível como parte do JavaScript Course 2021.
