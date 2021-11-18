@@ -10,3 +10,17 @@ arrays. Log a string like 'Neighbour: Canada' for each country
 
 */
 
+//Solução
+const listOfNeighbours = [
+
+    ['Canada', ' Mexico'],
+    ['Spain'],
+    ['Norway', ' Sweden', ' Russia']
+
+];
+
+for(let countries = 0; countries < listOfNeighbours.length; countries++){
+    
+    for(let neighbours = 0; neighbours < listOfNeighbours[countries].length; neighbours++)
+    console.log(`Neighbours: ${listOfNeighbours[countries][neighbours]}`);
+}
