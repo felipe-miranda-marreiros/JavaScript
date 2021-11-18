@@ -32,3 +32,24 @@ length of the array (because that's the number of elements)
 
 */
 
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+const tips = [];
+
+const totals = [];
+
+function calcTip (value) {
+
+    return value >= 50 && value <= 300 ? value * (15 / 100) : value * (20 / 100);
+};
+
+for(let i = 0; i < bills.length; i++){
+
+    tips.push(calcTip(bills[i]));
+    totals.push(calcTip(bills[i]) + bills[i]);
+}
+
+console.log(tips);
+console.log(totals);
+
+//Condições 1, 2, 3 foram aceitas.
