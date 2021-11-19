@@ -20,3 +20,16 @@ Test data:
 § Data 2: [12, 5, -5, 0, 4]
 
 */
+const arr = [17, 21, 23];
+
+function printForeCast(temp, days) {
+    return `${temp}°C in ${days} days...`
+}
+
+for(let i = 0; i < arr.length; i++){
+
+        console.log(printForeCast(arr[i], i + 1));
+};
+
+
+//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA poha
