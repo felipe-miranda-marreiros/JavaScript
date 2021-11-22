@@ -10,5 +10,7 @@ document.querySelector('.check').addEventListener('click', function () {
     
     if(!guess){
         document.querySelector('.message').textContent = 'Insira um número para começar!';
+    }else if (guess === number){
+        document.querySelector('.message').textContent = 'Número correto!';
     };
 })
