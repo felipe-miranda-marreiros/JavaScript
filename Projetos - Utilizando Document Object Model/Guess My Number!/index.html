@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="author" content="Felipe Miranda Marreiros" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Guess My Number!</title>
+  </head>
+  <body>
+    <header>
+      <h1>Guess My Number!</h1>
+      <p class="between">(Entre 1 e 20)</p>
+      <button class="btn again">Tentar de novo!</button>
+      <div class="number">?</div>
+    </header>
+    <main>
+      <section class="left">
+        <input type="number" class="guess" />
+        <button class="btn check">Checar!</button>
+      </section>
+      <section class="right">
+        <p class="message">Começando jogo...</p>
+        <p class="label-score">
+          Pontos adquiridos: <span class="score">20</span>
+        </p>
+        <p class="label-highscore">
+          Maior Pontuação: <span class="highscore">0</span>
+        </p>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
