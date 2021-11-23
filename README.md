@@ -11,6 +11,13 @@ Exercícios de acordo com cada assunto estudado em JavaScript na mesma ordem de 
 # Acessando
 Em cada pasta, existe arquivos com HTML, CSS e JavaScript. Basta conferir os arquivos com script.js.
 
+# Projetos
+
+### Guess My Number!
+![alt text](https://github.com/felipe-miranda-marreiros/JavaScript/blob/main/Projetos%20-%20Utilizando%20Document%20Object%20Model/Guess%20My%20Number!/guess-my-number.PNG)
+
+Pequeno jogo que consiste em adivinhar um número inteiro aleátorio entre 1 e 20. Cada nova partida um número é gerado, contendo a opção de dicas e maior pontuação.
+
 # Referências
 
 MDN - JavaScript
