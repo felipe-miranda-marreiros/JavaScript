@@ -5,17 +5,21 @@ let number = Math.trunc(Math.random() * 20) + 1;
 let highscore = 0;
 let score = 20;
 
+const displayMessage = function (message) {
+    document.querySelector('.message').textContent = message;
+}
 
 document.querySelector('.check').addEventListener('click', function () {
     
     const guess = Number(document.querySelector('.guess').value);
     
     if(!guess){
-        document.querySelector('.message').textContent = 'Insira um número para começar!';
+
+        displayMessage('Insira um número para começer!');
 
     }else if (guess === number){
 
-        document.querySelector('.message').textContent = 'Número correto!';
+        displayMessage('Número correto!');
         
         document.querySelector('body').style.backgroundColor = '#60b347';
         document.querySelector('.number').style.width = '30rem';
@@ -28,32 +32,20 @@ document.querySelector('.check').addEventListener('click', function () {
             highscore = score;
             document.querySelector('.highscore').textContent = highscore;
         };
-
-    } else if (guess > number){
+        
+    }else if (guess !== number){
 
         if(score > 1){
 
-        document.querySelector('.message').textContent = 'Valor alto demais!';
+        document.querySelector('.message').textContent = guess > number ? 'Valor alto demais!' : 'Valor baixo demais!';
         score--;
         document.querySelector('.score').textContent = score;
 
         }else{
-        document.querySelector('.message').textContent = 'Você perdeu todos os pontos!';
+        displayMessage('Você perdeu todos os pontos!');
         document.querySelector('.score').textContent = 0;
         }
-    } else if (guess < number){
-        
-        if (score > 1) {
-
-        document.querySelector('.message').textContent = 'Valor baixo demais!';
-        score--;
-        document.querySelector('.score').textContent = score;
-    
-        }else {
-        document.querySelector('.message').textContent = 'Você perdeu todos os pontos!';
-        document.querySelector('.score').textContent = 0;
-        }
-    };
+    }
 
     document.querySelector('.again').addEventListener('click', function () {
         
@@ -61,7 +53,7 @@ document.querySelector('.check').addEventListener('click', function () {
         number = Math.trunc(Math.random() * 20) + 1;
         
 
-        document.querySelector('.message').textContent = 'Começando jogo...';
+        displayMessage('Começando o jogo...')
         document.querySelector('.score').textContent = score;
         document.querySelector('.number').textContent = '?';
         document.querySelector('.guess').value = '';
