@@ -18,6 +18,14 @@ Em cada pasta, existe arquivos com HTML, CSS e JavaScript. Basta conferir os arq
 
 Pequeno jogo que consiste em adivinhar um número inteiro aleátorio entre 1 e 20. Cada nova partida um número é gerado, contendo a opção de dicas e maior pontuação.
 
+### Modal Window
+![alt text](https://github.com/felipe-miranda-marreiros/JavaScript/blob/main/Projetos%20-%20Utilizando%20Document%20Object%20Model/Modal%20Window/modal%20window%20imagem.PNG)
+
+Principal objetivo desse projeto é fazer um modal window que abra, mostre uma mensagem e feche. Para que o modal feche, foram adicionados três formas - por keydown, clicar em fechar e clique em área (no caso, tudo que não for a janela do modal).
+
+##### Modal aberto
+![alt text](https://github.com/felipe-miranda-marreiros/JavaScript/blob/main/Projetos%20-%20Utilizando%20Document%20Object%20Model/Modal%20Window/modal%20window%20aberto.PNG)
+
 # Referências
 
 MDN - JavaScript
