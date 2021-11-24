@@ -27,3 +27,14 @@ for(let i = 0;  i < btnsOpenModal.length; i++){
 
 btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
+
+document.addEventListener('keydown', function (event) { //função que vai fechar o modal de acordo com uma determinada classe.
+   
+    if (event.key === 'Escape' && !modal.classList.contains('hidden')) { //especificamos qual tecla será necessária pra fechar o modal, no caso ESC.
+
+         //se a classe não conter o que foi especificado nos parametros, então a função abaixo será executada. Por exemplo, hidden quer dizer que o modal está fechado. Então, caso a classe acima (modal) estiver aberta, a função abaixo será invocada ao apertar ESC.
+
+         closeModal();
+    };
+
+});
