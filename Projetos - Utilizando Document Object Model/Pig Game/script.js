@@ -7,6 +7,11 @@ const score1El = document.getElementById('score--1'); //forma de selecionar um e
 
 const diceEl = document.querySelector('.dice');
 
+//selecionando todos os botões do HTML.
+const btnNew = document.querySelector('.btn--new');
+const btnRoll = document.querySelector('.btn--roll');
+const btnHold = document.querySelector('.btn--hold');
+
 //resetando os pontos dos jogadores para 0
 score0El.textContent = 0;
 score1El.textContent = 0;
