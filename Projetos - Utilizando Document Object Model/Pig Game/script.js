@@ -1,6 +1,11 @@
 'use strict';
 
 //Selecionando elementos:
+
+//aqui será selecionado o elemento CSS para que exista a transição visual do jogador quando for a vez dele.
+const player0El = document.querySelector('.player--0');
+const player1El = document.querySelector('.player--1');
+
 const score0El = document.querySelector('#score--0'); //forma de selecionar um elemento por ID, semelhante ao CSS.
 
 const score1El = document.getElementById('score--1'); //forma de selecionar um elemento ID, mas dessa vez usando getElementById. Nesse processo não precisamos usar "#" para selecionar a classe.
@@ -54,6 +59,9 @@ btnRoll.addEventListener('click', function () {
         document.getElementById(`current--${activePlayer}`).textContent = 0; //será mostrado para o usuário que o seus pontos voltaram para zero
         currentScore = 0; //reseta os pontos quando passar para o próximo player
         activePlayer = activePlayer === 0 ? 1 : 0; //reatribuíndo valor para trocar, dinamicamente, a vez de cada jogador de acordo com as condições acima.        
+        //aqui será usado a função toggle que irá colocar uma classe em um elemento que não tiver ela, no caso player--active está ativo apenas no player--0. Então, posteriormente, ela também irá para player--1 quando for a vez dele.
+        player0El.classList.toggle('player--active');
+        player1El.classList.toggle('player--active');
     };
       
 });
