@@ -23,6 +23,31 @@ const current1El = document.getElementById('current--1');
 
 let playing = true;
 
+const init = function () { //essa função tem como objetivo resetar o jogo e voltar com os valores iniciais.
+
+//Essa função no futuro, em alguma atualização do JS, VSCode ou quando for fazer o deploy, não irá funcionar. LOL.
+    
+    const score = [0, 0]; //os pontos serão armazenados em uma array
+    let currentScore = 0;
+    let playing = true;
+    let activePlayer = 0;
+
+    score0El.textContent = 0;
+    score1El.textContent = 0;
+
+    current0El.textContent = 0;
+    current1El.textContent = 0;
+
+    diceEl.classList.add('hidden');
+    player0El.classList.remove('player--winner');
+    player1El.classList.remove('player--winner');
+    player0El.classList.add('player--active');
+    player1El.classList.remove('player--active');
+
+};
+
+init();
+
 const switchPlayer = function () { //fará parte do else.
 
     //essa parte do else irá mudar para o próximo jogador
@@ -101,3 +126,5 @@ btnHold.addEventListener('click', function () {
     };
 };
 });
+
+btnNew.addEventListener('click', init); //quando o usuário clicar em Novo Jogo, a função irá começar e resear o jogo.
