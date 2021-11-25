@@ -25,6 +25,11 @@ diceEl.classList.add('hidden'); //ocultando dado para o jogadores
 
 let currentScore = 0; //todos os pontos do Placar Atual começarão com zero.
 
+
+const score = [0, 0]; //os pontos serão armazenados em uma array
+let activePlayer = 0; //aqui será trocado para 0 ou 1 de acordo com o IF-ELSE abaxio.
+
+
 btnRoll.addEventListener('click', function () {
     
     // 1 - aqui será gerado um valor aleátorio pro dado;
@@ -38,10 +43,17 @@ btnRoll.addEventListener('click', function () {
     if (dice !== 1){
         // Se o resultado não for 1, então os pontos serão guardados no Placar Atual.
         currentScore += dice;
-        current0El.textContent = currentScore;
+
+        document.getElementById(`current--${activePlayer}`).textContent = currentScore;
+
+        // current0El.textContent = currentScore;
 
     } else {
         //essa parte do else irá mudar para o próximo jogador
+
+        document.getElementById(`current--${activePlayer}`).textContent = 0; //será mostrado para o usuário que o seus pontos voltaram para zero
+        currentScore = 0; //reseta os pontos quando passar para o próximo player
+        activePlayer = activePlayer === 0 ? 1 : 0; //reatribuíndo valor para trocar, dinamicamente, a vez de cada jogador de acordo com as condições acima.        
     };
       
 });
