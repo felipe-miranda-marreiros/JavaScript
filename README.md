@@ -11,7 +11,7 @@ Exercícios de acordo com cada assunto estudado em JavaScript na mesma ordem de 
 # Acessando
 Em cada pasta, existe arquivos com HTML, CSS e JavaScript. Basta conferir os arquivos com script.js.
 
-# Projetos
+# Projetos - Utilizando Document Object Model
 
 ### Guess My Number!
 ![alt text](https://github.com/felipe-miranda-marreiros/JavaScript/blob/main/Projetos%20-%20Utilizando%20Document%20Object%20Model/Guess%20My%20Number!/guess-my-number.PNG)
@@ -25,6 +25,15 @@ Principal objetivo desse projeto é fazer um modal window que abra, mostre uma m
 
 ##### Modal aberto
 ![alt text](https://github.com/felipe-miranda-marreiros/JavaScript/blob/main/Projetos%20-%20Utilizando%20Document%20Object%20Model/Modal%20Window/modal%20window%20aberto.PNG)
+
+### Pig Game
+Pequeno jogo baseado em dice games que tem como proposta rolar um dado com função de valor aleátoria (Math.random). O jogador que alcançar 100 pontos ganha a partida. Além disso, também tem funcionalidades como acumular pontos, rolar dados, placar atual e novo jogo. 
+
+#### Regras:
+Jogadores podem rolar dados a vontade, exceto quando o dado rolar 1, então os pontos acumulados serão perdidos e a vez será do próximo jogador.
+
+![alt text](https://github.com/felipe-miranda-marreiros/JavaScript/blob/main/Projetos%20-%20Utilizando%20Document%20Object%20Model/Pig%20Game/pig-game-img.PNG)
+
 
 # Referências
 
