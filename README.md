@@ -49,5 +49,5 @@ https://web.dio.me/browse?filter=JavaScript
 JavaScript Programming - Full Course
 https://www.youtube.com/watch?v=jS4aFq5-91M&t=21s
 
-The Complete JavaScript Course 2021: From Zero to Expert! por Jonas Schmedtmann
+The Complete JavaScript Course 2021: From Zero to Expert! por Jonas Schmedtmann - a base para o meu estudo com JavaScript.
 https://www.udemy.com/course/the-complete-javascript-course/
