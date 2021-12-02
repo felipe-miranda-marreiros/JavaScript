@@ -10,6 +10,7 @@ Exercícios de acordo com cada assunto estudado em JavaScript na mesma ordem de 
 
 # Acessando
 Em cada pasta, existe arquivos com HTML, CSS e JavaScript. Basta conferir os arquivos com script.js.
+Os arquivos em PDF são a minha documentação.
 
 # Projetos - Utilizando Document Object Model
 
