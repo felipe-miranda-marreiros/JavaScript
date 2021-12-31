@@ -81,3 +81,47 @@ var numProducts = 10;
 function deleteShoppingCart () {
     console.log('All products deleted');
 }
+
+////////////////////////This Keyword
+
+// const calcularIdade = function (ano) {
+//     console.log(2021 - ano);
+//     console.log(this);
+// }
+
+// calcularIdade(1997);
+
+/////Arrow Function
+
+const calcularIdade = ano => {
+    console.log(2021 - ano);
+    console.log(this);
+}
+
+calcularIdade(1997);
+
+const felipe = {
+    year: 1997,
+    lastName: 'Marreiros',
+    calcAge: function () {
+        console.log(this);
+        console.log(2021 - this.year);
+    }
+}
+
+felipe.calcAge();
+
+
+const matilda =  {
+    year: 1997,
+};
+
+//esse método é chamado de method borrow.
+matilda.calcAge = felipe.calcAge;
+
+console.log(matilda);
+matilda.calcAge();
+
+const f = felipe.calcAge;
+
+f();
