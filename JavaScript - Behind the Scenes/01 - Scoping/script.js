@@ -191,3 +191,47 @@ const friend = func;
 friend.age = 27;
 console.log('Friend', friend);
 console.log('Me', func);
+
+///////////
+
+////primite types
+let lastName = 'Williams';
+let oldLastName = lastName;
+lastName = 'Davis';
+
+console.log(lastName, oldLastName);
+
+// reference types
+const jessica = {
+    firstName: 'Jessica',
+    lastName: 'Williams',
+    age: 27,
+};
+
+const marriedJessica = jessica;
+marriedJessica.lastName = 'Davis';
+
+console.log('Before marriage', jessica);
+console.log('after marriage', marriedJessica);
+
+// marriedJessica = {}
+
+//////// copying objects
+
+const jessica2 = {
+    firstName: 'Jessica',
+    lastName: 'Williams',
+    age: 27,
+    family: ['Alice', 'Bob']
+};
+
+const jessicaCopy = Object.assign({}, jessica2);
+//copia apenas o primeiro objeto. Se houver um objeto dentro de um objeto, então não fará efeito.
+
+jessicaCopy.lastName = 'Davis';
+
+jessicaCopy.family.push('Mary');
+jessicaCopy.family.push('John');
+
+console.log('Before marriage', jessica2);
+console.log('after marriage', jessicaCopy);
