@@ -12,6 +12,10 @@ const restaurant = {
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
+  order: function (starterIndex, mainIndex){
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
+
   openingHours: {
     thu: {
       open: 12,
@@ -27,3 +31,34 @@ const restaurant = {
     },
   },
 };
+
+//desestruturando array
+let [main, ,secondary] = restaurant.categories;
+console.log(main, secondary);
+//usamos vaco para pular um elemento.
+
+//trocando variáveis de lugar
+[main, secondary] = [secondary, main]
+console.log(main, secondary);
+
+const [starter, mainCourse] = restaurant.order(2, 0);
+//o resultado será Garlic Breed e Pizza da funçãoa acima.
+
+console.log(starter, mainCourse);
+
+//array com nested destructuring
+const nested = [2, 4, [5, 6]];
+
+//pegando valores da primeira e segunda array e colocando em variáveis.
+
+const [i, ,[j, k]] = nested;
+
+console.log(i, j, k);
+
+//default values
+
+//atribuíndo valores para variáveis desestruturadas, assim podemos saber o index de cada um.
+const [p = 1, q = 1, r = 1] = [8, 9];
+
+console.log(p, q, r);
+//r terá valor de 1, que ele não existe na array.
