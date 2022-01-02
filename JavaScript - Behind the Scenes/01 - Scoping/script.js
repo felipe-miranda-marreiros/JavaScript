@@ -125,3 +125,50 @@ matilda.calcAge();
 const f = felipe.calcAge;
 
 f();
+
+////////////// Functions
+
+const felipe2 = {
+    
+    firstName: 'Felipe',
+    year: 1991,
+    lastName: 'Marreiros',
+    calcAge: function () {
+        console.log(this);
+        console.log(2021 - this.year);
+
+        // const self = this;
+
+        // const isMillenial = function () {
+        //     console.log(self.year >= 1981 && self.year <= 1996);
+        // };
+
+        // isMillenial();
+
+        const isMillenial = () => {
+            console.log(this);
+            console.log(this.year >= 1981 && this.year <= 1996);
+        };
+        isMillenial();
+
+    },
+    greet: () => console.log(`Hey ${this.firstName}`)
+    
+};
+
+felipe2.greet();
+felipe2.calcAge();
+
+
+const addExpre = function (a, b) {
+    console.log(arguments);
+    return a + b;
+};
+addExpre(2, 5);
+
+var addArrow = (a, b) => {
+    console.log(arguments);
+    return a + b;    
+};
+
+addArrow(2, 5, 8);
