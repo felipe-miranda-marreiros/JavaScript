@@ -124,7 +124,7 @@ matilda.calcAge();
 
 const f = felipe.calcAge;
 
-f();
+// f();
 
 ////////////// Functions
 
@@ -167,8 +167,27 @@ const addExpre = function (a, b) {
 addExpre(2, 5);
 
 var addArrow = (a, b) => {
-    console.log(arguments);
+    // console.log(arguments);
     return a + b;    
 };
 
 addArrow(2, 5, 8);
+
+//primitives vs objects
+
+let age = 30;
+let oldAge = age;
+age = 31;
+
+console.log(age);
+console.log(oldAge);
+
+const func = {
+    nome: 'Felipe',
+    idade: 24,
+};
+
+const friend = func;
+friend.age = 27;
+console.log('Friend', friend);
+console.log('Me', func);
