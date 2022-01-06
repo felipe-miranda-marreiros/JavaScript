@@ -59,16 +59,34 @@ const game = {
     x: 3.25,
     team2: 6.5,
   },
+  scores: {},
   printGoals: function (...x) {
-    for (let i = 0; i < x.length; i++) {
-      console.log(`${x[i]} have scored`);
-    }
     console.log(`The total scored is ${game.score}`);
   },
   isWinner: function () {
     let result = game.odds.team1 || game.odds.team2;
     let p = console.log(result);
     return p;
+  },
+  playersScored: function () {
+    for (const [i, player] of this.scored.entries()) {
+      console.log(`Goal ${i + 1}: ${player}`);
+    }
+  },
+  averageOdd: function () {
+    const values = Object.values(this.odds);
+    let average = 0;
+    for (const oddValues of values) {
+      average += oddValues;
+    }
+    average /= values.length;
+    console.log(average);
+  },
+  showOdds: function () {
+    for (const [team, odd] of Object.entries(this.odds)) {
+      const teamStr = team === "x" ? "draw" : `victory ${this[team]}`;
+      console.log(`Odd of ${teamStr} ${odd}`);
+    }
   },
 };
 
@@ -86,3 +104,8 @@ const { team1, draw, team2 } = game.odds;
 
 game.printGoals(...game.scored);
 game.isWinner();
+
+/////////////////////////////////
+game.playersScored();
+game.averageOdd();
+game.showOdds();
