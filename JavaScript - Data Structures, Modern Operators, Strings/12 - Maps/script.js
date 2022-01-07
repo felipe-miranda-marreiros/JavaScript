@@ -44,7 +44,7 @@ rest
   .set("close", 23)
   .set(true, "We are open")
   .set(false, "We are close");
-  
+
 const time = 21;
 
 // console.log(rest.get(time > rest.get("open") && time < rest.get("close")));
@@ -67,3 +67,40 @@ const time = 21;
 const arr = [rest.get('categories')];
 
 console.log(arr);
+
+////////Loops em Maps
+
+const question = new Map([
+  ["Question", "What is the best programing language in the world?"],
+  [1, "C"],
+  [2, "Java"],
+  [3, "JavaScript"],
+
+  ["Correct", 3],
+  [true, "Correct"],
+  [false, "Try again!"],
+]);
+
+console.log(question);
+
+// convertendo Objetos para Maps
+const hoursMap = new Map(Object.entries(openingHours));
+
+// Quizz App
+
+console.log(question.get("Question"));
+
+for (const [key, value] of question) {
+  if (typeof key === "number") console.log(`Answer ${key}: ${value}`);
+}
+
+const answer = Number(prompt("Your answer"));
+console.log(answer);
+
+const v =
+  answer === 3
+    ? console.log(`${question.get(true)}`)
+    : console.log(`${question.get(false)}`);
+
+// convertendo Map para Array
+console.log(...question);
