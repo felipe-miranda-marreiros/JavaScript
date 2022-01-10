@@ -109,3 +109,35 @@ game.isWinner();
 game.playersScored();
 game.averageOdd();
 game.showOdds();
+
+const gameEvents = new Map([
+  [17, "GOAL"],
+  [36, "Substitution"],
+  [47, "GOAL"],
+  [61, "Substitution"],
+  [64, "Yellow card"],
+  [69, "Red card"],
+  [70, "Substitution"],
+  [72, "Substitution"],
+  [76, "GOAL"],
+  [80, "GOAL"],
+  [92, "Yellow card"],
+]);
+
+//transformando Map em Set(com valores únicos) e colocando em uma array;
+const events = [...new Set(gameEvents.values())];
+
+//deletando um elemento do Map
+gameEvents.delete(64);
+
+//Pop tirou o último elemento da Array Time;
+const time = [...gameEvents.keys()].pop();
+
+console.log(
+  `An event happened, on average, every ${time / gameEvents.size} minutes`
+);
+
+for (const [min, event] of gameEvents) {
+  const half = min <= 45 ? "First" : "Second";
+  console.log(`[${half}Half] ${min}: ${event}`);
+}
