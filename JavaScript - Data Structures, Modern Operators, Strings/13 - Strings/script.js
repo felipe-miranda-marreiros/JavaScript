@@ -153,3 +153,83 @@ const checkBaggage = function (items) {
 checkBaggage("I have a laptop, some Food and a pocket Knife");
 checkBaggage("Socks and camera");
 checkBaggage("Got some snaks and a gun for protection");
+
+//////////////////////////////////////////////////////////////////////////////
+
+//Split() e Join()
+
+//A função split() tem como objeto seperar strings de acordo com o parâmetro especificado.
+console.log("a+very+nice+string".split("+"));
+//no exemplo acima, usei para seperar as strings o argumento '+'. No final, elas serã guardadas
+//em uma Array
+
+//separando por espaço vázio
+console.log("Felipe Miranda".split(" "));
+
+//já que o split() guarda as strings em variáveis, podemos desestrutura-las
+const [firstName, lastName] = "Felipe Miranda".split(" ");
+console.log(firstName, lastName);
+
+//Com join() podemos adicionar um novo elemento em uma string. No caso abaixo, 'Mr.' e espaço vazio com join()
+const newName = ["Mr.", firstName, lastName.toUpperCase()].join(" ");
+console.log(newName);
+
+//Capitalizar a primeira letra de um nome
+
+const capitalizeName = function (name) {
+  const namesUpper = [];
+
+  for (const splitedNames of name.split(" ")) {
+    //Primeiro método
+    // namesUpper.push(splitedNames[0].toUpperCase() + splitedNames.slice(1));
+
+    //segundo método
+    namesUpper.push(
+      splitedNames.replace(splitedNames[0], splitedNames[0].toUpperCase())
+    );
+  }
+
+  return console.log(...namesUpper);
+};
+
+capitalizeName("jessica ann smith davis");
+capitalizeName("felipe miranda marreiros");
+
+//////////////////////////////////////////////////
+
+//Padding é o método de adicionar caracteres em uma string de acordo com os argumentos pssados.
+
+//Padding, na verdade, não está adicionando mais 20 caracteres, o que está acontece é que ele está
+//dizendo que a string precisa ter 20 de length, e vai adicionar o que falta pra isso acontecer.
+
+//Podemos usar padStart() pra adicionar no inicio e padEnd() para adicionar no final da string
+
+//Padding aceita dois valores, o primeiro é length desejada e o segundo é o caracter a se inserido
+
+const message = "Go to gate 23";
+console.log(message.padStart(20, "+").padEnd());
+
+//Aqui estamos escondendo os números dos cartões de credito.
+
+const maskCreditCard = function (number) {
+  const str = number.toString();
+  const last = str.slice(-4);
+  return last.padStart(str.length, "*");
+};
+
+console.log(maskCreditCard(43378456));
+console.log(maskCreditCard("4584896655558744"));
+
+//Repeat() - funciona como um loop
+
+const message2 = "Bad weather... all departures delayed ";
+
+console.log(message2.repeat(5));
+
+const planesInLine = function (n) {
+  console.log(`There are ${n} planes in line ${"✈".repeat(n)}`);
+};
+
+planesInLine(5);
+planesInLine(3);
+planesInLine(12);
