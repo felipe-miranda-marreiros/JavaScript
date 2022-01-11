@@ -63,3 +63,93 @@ const checkMiddleSet = function (seat) {
 checkMiddleSet("11B");
 checkMiddleSet("23C");
 checkMiddleSet("3E");
+
+//////////////////////////////////////////////////////////////////////
+
+//Mudar para maisculo ou minusculo
+console.log(airline.toUpperCase());
+console.log(airline.toLowerCase());
+
+//Consertar letras em um nome, exemplo;
+
+//Primeiro método
+const passenger = "FeLiPE";
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect =
+  passengerLower[0].toUpperCase() + passengerLower.slice(1);
+
+console.log(passengerCorrect);
+
+//Colocando em uma função
+function correctName(name) {
+  let firstFix = name.toLowerCase();
+  let secondFix = name[0].toUpperCase() + firstFix.slice(1);
+  return console.log(secondFix);
+}
+correctName("FeLiPE");
+
+//Comparando Emails e consetando strings
+
+const email = "hello@felipe.com";
+//string com input todo fudido
+const loginEmail = "  Hello@Felipe.com \n";
+
+//Primeiro método usando trim()
+const lowerEmail = loginEmail.toLowerCase();
+const trimmedEmail = lowerEmail.trim();
+console.log(trimmedEmail);
+
+//Segundo método usando trim()
+const normalizedEmail = loginEmail.toLowerCase().trim();
+console.log(normalizedEmail);
+
+console.log(email === normalizedEmail);
+
+//////////////////////////////////////////////////////
+
+//usando função replace() para trocar elementos de uma string
+const priceGB = "288,97£";
+
+//a função replace() tem dois parâmetros - o primeiro é elemento que desejamos trocar, e o segundo é o novo elemento que deve entrar.
+const priceUS = priceGB.replace("£", "$").replace(",", ".");
+
+console.log(priceUS);
+
+//trocando palavras com o método replace()
+const announcement =
+  "All passagers come to boarding door 23. Boarding door 23.";
+
+//Primeiro método
+console.log(announcement.replace(/door/g, "gate"));
+
+//Segundo método usando replaceAll()
+console.log(announcement.replaceAll("door", "gate"));
+
+/////////////////////////////////////////////////////////////////////////////////
+
+//Métodos que retornam booleanos
+
+const planes = "Airbus A320neo";
+console.log(planes.includes("A320"));
+console.log(planes.includes("Boeing"));
+console.log(planes.startsWith("Air"));
+
+if (planes.startsWith("Airbus") && planes.endsWith("neo")) {
+  console.log("Part of the New Airbus Family");
+}
+
+//Exercicio
+
+const checkBaggage = function (items) {
+  //primeiro covertemos para lowerCase para depois fazer a comparação. Se isso não acontecer, a função permitirá o passageira a entrar com faca e armado.
+  const baggage = items.toLowerCase();
+  if (baggage.includes("knife") || baggage.includes("gun")) {
+    console.log("You're not allowed on board");
+  } else {
+    console.log("Welcome aboard");
+  }
+};
+
+checkBaggage("I have a laptop, some Food and a pocket Knife");
+checkBaggage("Socks and camera");
+checkBaggage("Got some snaks and a gun for protection");
