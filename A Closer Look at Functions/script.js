@@ -25,6 +25,8 @@ createBooking("LH123", undefined, 1000);
 
 //////////////////////////////////////////////////////////////////////////////
 
+//Argumentos: Value vs Reference
+
 const flight = "LH234";
 const felipe = {
   name: "Felipe Miranda",
