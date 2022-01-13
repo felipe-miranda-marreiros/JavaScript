@@ -67,3 +67,31 @@ bookEW23("Martha Cooper");
 
 ///////////////////////////////////////////////////////////////////////////
 
+//Usando Bind() com EventListener
+
+lufthansa.planes = 300;
+lufthansa.buyPlane = function () {
+  this.planes++;
+};
+
+document
+  .querySelector(".buy")
+  .addEventListener("click", lufthansa.buyPlane.bind(lufthansa));
+
+//// Partial Application
+
+const addTax = (rate, value) => value + value * rate;
+console.log(addTax(0.1, 200));
+
+const addVAT = addTax.bind(null, 0.23);
+
+console.log(addVAT(100));
+console.log(addVAT(23));
+
+
+
+const test = (rate) => (value) => value + value * rate;
+
+const result = test(0.1)(200);
+
+console.log(result > 1 ? "Tá caro" : "Tá caro");
