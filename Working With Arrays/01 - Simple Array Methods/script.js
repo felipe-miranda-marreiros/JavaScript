@@ -75,3 +75,43 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 
+
+let arr = ['a', 'b', 'c', 'd', 'e'];
+
+//////Método Slice
+//Slice não altera a Array, apenas cria uma nova
+
+console.log(arr.slice(2));
+console.log(arr.slice(2, 4));
+console.log(arr.slice(-2));
+console.log(arr.slice(-1));
+console.log(arr.slice(1, -2));
+
+//copiando uma Array
+console.log(arr.slice());
+
+/////Método Splice
+//Splice consegue alterar uma arrya, diferente de Slice;
+
+console.log(arr.splice(2));
+
+console.log(arr);
+
+//Método Reverse
+//Ele coloca em ordem uma array
+//Ele também consegue alterar a array, ou seja, não faz uma cópia
+
+arr = ['a', 'b', 'c', 'd', 'e'];
+const arr2 = ['j', 'i', 'h', 'g', 'f'];
+console.log(arr2.reverse());
+
+
+//Método Concat
+//faz uma concatenação entre duas arrays. Semelhante a Spread.
+
+const letters = arr.concat(arr2);
+console.log(letters);
+
+//Método Join
+
+console.log(letters.join(' - '));
