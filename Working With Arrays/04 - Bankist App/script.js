@@ -94,4 +94,9 @@ const createUsernames = function (accounts) {
 
 createUsernames(accounts);
 
-console.log(accounts);
+const calcDisplayBalance = function (movements) {
+  const balance = movements.reduce((acc, mov) => acc + mov);
+  labelBalance.textContent = `${balance} EUR`;
+};
+
+calcDisplayBalance(account1.movements);
