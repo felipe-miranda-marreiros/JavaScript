@@ -176,6 +176,25 @@ btnTransfer.addEventListener("click", function (event) {
   }
 });
 
+btnLoan.addEventListener("click", function (event) {
+  event.preventDefault();
+
+  const amount = Number(inputLoanAmount.value);
+
+  if (
+    amount > 0 &&
+    currentAccount.movements.some((mov) => mov >= amount / 10)
+  ) {
+    //add movement
+    currentAccount.movements.push(amount);
+
+    //Update UI
+    updateUI(currentAccount);
+
+    inputLoanAmount.value = "";
+  }
+});
+
 btnClose.addEventListener("click", function (event) {
   event.preventDefault();
 
@@ -192,9 +211,8 @@ btnClose.addEventListener("click", function (event) {
 
     //esconder o App
     containerApp.style.opacity = 0;
-
   }
-  
+
   //resetando valores
   inputCloseUsername.value = inputClosePin.value = "";
 });
