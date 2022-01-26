@@ -216,3 +216,17 @@ btnClose.addEventListener("click", function (event) {
   //resetando valores
   inputCloseUsername.value = inputClosePin.value = "";
 });
+
+//Flat
+const overalBalance = accounts
+  .map((acc) => acc.movements)
+  .flat()
+  .reduce((acc, mov) => acc + mov, 0);
+
+//FlatMap
+
+const overalBalance2 = accounts
+  .flatMap((acc) => acc.movements)
+  .reduce((acc, mov) => acc + mov, 0);
+
+
