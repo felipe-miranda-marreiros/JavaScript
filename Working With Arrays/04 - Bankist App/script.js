@@ -229,4 +229,20 @@ const overalBalance2 = accounts
   .flatMap((acc) => acc.movements)
   .reduce((acc, mov) => acc + mov, 0);
 
+// const owners = ["Jonas", "Zach", "Adam", "Martha"];
 
+// console.log(owners.sort());
+
+// const movements = account1.movements;
+
+// // return < 0, A, B (Keep order)
+// // return > 0, B, A (switch order)
+
+// // Ascending
+// movements.sort((a, b) => b - a);
+// console.log(movements);
+
+// //Descending
+// movements.sort((a, b) => a - b);
+
+// console.log(movements);
