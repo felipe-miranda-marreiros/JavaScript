@@ -266,3 +266,56 @@ labelBalance.addEventListener("click", function () {
 
   console.log(movementsUI);
 });
+
+const bankDepositSum = accounts
+  .flatMap((mov) => mov.movements)
+  .filter((mov) => mov > 0)
+  .reduce((sum, cur) => sum + cur, 0);
+
+console.log(bankDepositSum);
+
+/////////////////
+
+const numDeposits1000 = accounts
+  .flatMap((acc) => acc.movements)
+  .reduce((count, cur) => (cur >= 1000 ? count + 1 : count), 0);
+
+console.log(numDeposits1000);
+
+// prefixed ++ operador
+let a = 10;
+console.log(++a);
+
+const { deposits, withdrawls } = accounts
+  .flatMap((mov) => mov.movements)
+  .reduce(
+    (sums, cur) => {
+      // cur > 0 ? (sums.deposits += cur) : (sums.withdrawls += cur);
+      // return sums;
+      sums[cur > 0 ? "deposits" : "withdrawls"] += cur;
+      return sums;
+    },
+    { deposits: 0, withdrawls: 0 }
+  );
+
+console.log(deposits, withdrawls);
+
+///
+
+const convertTitleCase = function (title) {
+  const exceptions = ["a", "an", "and", "the", "but", "or", "on", "in", "with"];
+
+  const capitalize = (str) => str[0].toUpperCase() + str.slice(1);
+
+  const titleCase = title
+    .toLowerCase()
+    .split(" ")
+    .map((word) => (exceptions.includes(word) ? word : capitalize(word)))
+    .join(" ");
+
+  return capitalize(titleCase);
+};
+
+console.log(convertTitleCase("This is a nice title"));
+console.log(convertTitleCase("This is a LONG title, but not too long"));
+console.log(convertTitleCase("and here is another title with an EXAMPLE"));
