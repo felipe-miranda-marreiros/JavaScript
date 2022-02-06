@@ -149,3 +149,56 @@ const s = new EV("s", 130, 90);
 s.accelerate();
 s.brake();
 s.chargeBattery();
+
+/*
+
+Your tasks:
+
+1. Re-create Challenge #3, but this time using ES6 classes: create an 'EVCl'
+child class of the 'CarCl' class
+
+2. Make the 'charge' property private
+
+3. Implement the ability to chain the 'accelerate' and 'chargeBattery'
+methods of this class, and also update the 'brake' method in the 'CarCl'
+class. Then experiment with chaining!
+
+Test data:
+
+§ Data car 1: 'Rivian' going at 120 km/h, with a charge of 23%
+
+*/
+
+class CarZL {
+  constructor(name, speed) {
+    this.name = name;
+    this.speed = speed;
+  }
+  accelerate() {
+    console.log((this.speed += 10));
+    return this;
+  }
+  brake() {
+    console.log((this.speed -= 5));
+    return this;
+  }
+}
+
+class EVCL extends CarZL {
+  constructor(name, speed, charge) {
+    super(name, speed);
+    this._charge = charge;
+  }
+  brake() {
+    console.log((this.speed -= 3));
+    return this;
+  }
+  chargeBattery() {
+    console.log((this._charge -= 1));
+    return this;
+  }
+}
+
+const rivian = new EVCL("Rivian", 120, 23);
+
+rivian.accelerate().brake().chargeBattery();
