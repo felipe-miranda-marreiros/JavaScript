@@ -30,6 +30,7 @@ document.addEventListener("keydown", function (e) {
   }
 });
 
+//Cookie modal
 const header = document.querySelector(".header");
 const message = document.createElement("div");
 message.classList.add("cookie-message");
@@ -44,3 +45,29 @@ header.prepend(message);
 document
   .querySelector(".btn--close-cookie")
   .addEventListener("click", () => message.remove());
+
+////////////////
+
+//Scroll Smooth e ScrollTo
+
+const btnScrollTo = document.querySelector(".btn--scroll-to");
+const section1 = document.querySelector("#section--1");
+
+btnScrollTo.addEventListener("click", (event) => {
+  //ScrollTo - primeiro exemplo
+  const s1coords = section1.getBoundingClientRect();
+  // window.scrollTo(
+  //   s1coords.left + window.pageXOffset,
+  //   s1coords.top + window.pageYOffset
+  // );
+
+  //ScrollTo - segundo exemplo com ScrollSmooth - versão antiga
+  // window.scrollTo({
+  //   left: s1coords.left + window.pageXOffset,
+  //   top: s1coords.top + window.pageYOffset,
+  //   behavior: "smooth",
+  // });
+
+  //Versão nova
+  section1.scrollIntoView({ behavior: "smooth" });
+});
