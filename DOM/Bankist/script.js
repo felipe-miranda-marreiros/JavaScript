@@ -29,3 +29,18 @@ document.addEventListener("keydown", function (e) {
     closeModal();
   }
 });
+
+const header = document.querySelector(".header");
+const message = document.createElement("div");
+message.classList.add("cookie-message");
+message.innerHTML =
+  "We use cookied for improved functionality and analytics <button class='btn btn--close-cookie'>Got it</button>";
+header.prepend(message);
+// header.append(message);
+// header.before(message)
+// header.append(message.cloneNode(true));
+// header.prepend(message.cloneNode(true));
+
+document
+  .querySelector(".btn--close-cookie")
+  .addEventListener("click", () => message.remove());
