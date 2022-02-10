@@ -30,6 +30,36 @@ document.addEventListener("keydown", function (e) {
   }
 });
 
+////////////////////////////////////////////////
+//Page Navigation
+
+//Primeiro exemplo 1 - loop para cada item
+// document.querySelectorAll(".nav__link").forEach((el) =>
+//   el.addEventListener("click", function (e) {
+//     e.preventDefault();
+//     const id = this.getAttribute("href");
+//     document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+//   })
+// );
+
+//Segundo exemplo 2 - Event Delegation
+
+//Para fazer um Event Delegation, precisamos de dois fatores:
+
+//1 - Adicionar o Event em um node parente, assim todos os filhos irão herdar o Event;
+
+//2 - Determinar qual elemento originou o evento
+
+document.querySelector(".nav__links").addEventListener("click", function (e) {
+  e.preventDefault();
+  //Match strategy
+  if (e.target.classList.contains("nav__link")) {
+    const id = e.target.getAttribute("href");
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+  }
+});
+
+///////////////////////////////////////////////
 //Cookie modal
 const header = document.querySelector(".header");
 const message = document.createElement("div");
