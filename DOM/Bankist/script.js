@@ -160,3 +160,28 @@ tabsContainer.addEventListener("click", function (event) {
     .querySelector(`.operations__content--${clicked.dataset.tab}`)
     .classList.add("operations__content--active");
 });
+
+//Menu fade animation
+
+const nav = document.querySelector(".nav");
+
+const handlerHover = function (event, opacity) {
+  if (event.target.classList.contains("nav__link")) {
+    const clicked = event.target;
+    const siblings = clicked.closest(".nav").querySelectorAll(".nav__link");
+    const logo = clicked.closest(".nav").querySelector("img");
+
+    siblings.forEach((el) => {
+      if (el !== clicked) {
+        el.style.opacity = this;
+      }
+    });
+    logo.style.opacity = this;
+  }
+};
+
+//Passing "argument" into handler
+
+nav.addEventListener("mouseover", handlerHover.bind(0.5));
+
+nav.addEventListener("mouseout", handlerHover.bind(1));
