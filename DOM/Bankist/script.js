@@ -240,3 +240,27 @@ const headerObserver = new IntersectionObserver(stickyNav, {
   rootMargin: `-${navHeight}px`,
 });
 headerObserver.observe(headerNav);
+
+///////////////////////////////////////////Reveal Section//////////////////////////
+
+const allSections = document.querySelectorAll(".section");
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) {
+    return;
+  } else {
+    entry.target.classList.remove("section--hidden");
+    observer.unobserver(entry.target);
+  }
+};
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  //só será mostrado a sessão depois de 15% do viewport e não 0 como no sticky bar;
+  threshold: 0.15,
+});
+
+//escondendo as sessões que queremos usar no Reveal
+allSections.forEach(function (section) {
+  sectionObserver.observe(section);
+  section.classList.add("section--hidden");
+});
