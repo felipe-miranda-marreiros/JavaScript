@@ -288,3 +288,96 @@ const imgObserver = new IntersectionObserver(loadImg, {
   rootMargin: "-200px",
 });
 imgTargets.forEach((img) => imgObserver.observe(img));
+
+//Slider
+
+const slides = document.querySelectorAll(".slide");
+const btnLeft = document.querySelector(".slider__btn--left");
+const btnRight = document.querySelector(".slider__btn--right");
+const dotContainer = document.querySelector(".dots");
+
+//aqui será 100 * o index porque é o valor que precisamos
+
+////O primeiro slide deve ser em 0%, o segundo em 200%, e o último 300%;
+
+//começamos com 0%
+let curSlide = 0;
+//pegando a largura de quantas imagens existe, assim o javascript pare no ultimo
+const maxSlide = slides.length;
+
+//função para colocar os valores do slide
+const goToSlide = function (slide) {
+  slides.forEach(
+    (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+  );
+};
+goToSlide(0);
+
+//função para ir pro próximo slide
+const nextSlide = function () {
+  if (curSlide === maxSlide - 1) {
+    curSlide = 0;
+  } else {
+    //acrescentamos mais 1 a cada click
+    curSlide++;
+  }
+  goToSlide(curSlide);
+  activateDot(curSlide);
+};
+
+const prevSlide = function () {
+  if (curSlide === 0) {
+    curSlide = maxSlide - 1;
+  } else {
+    curSlide--;
+    goToSlide(curSlide);
+    activateDot(curSlide);
+  }
+};
+
+//Next Slide
+btnRight.addEventListener("click", nextSlide);
+//Previous Slide
+btnLeft.addEventListener("click", prevSlide);
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "ArrowLeft") prevSlide();
+  event.key === "ArrowRight" && nextSlide();
+});
+
+//criando os pontos do Slide
+//Os pontos são criados de acordo com o número de imagens do HTML
+
+const createDots = function () {
+  slides.forEach((_, index) => {
+    dotContainer.insertAdjacentHTML(
+      "beforeend",
+      `<button class="dots__dot" data-slide="${index}"></button>`
+    );
+  });
+};
+
+createDots();
+
+///////criando interação entre os botões com os pontos do Slide
+
+const activateDot = function (slide) {
+  document
+    .querySelectorAll(".dots__dot")
+    .forEach((dot) => dot.classList.remove("dots__dot--active"));
+  document
+    .querySelector(`.dots__dot[data-slide="${slide}"]`)
+    .classList.add("dots__dot--active");
+};
+
+//colocando o valor zero para que o slide inicie no primeiro ponto e ficar visiveil que estamos nos primeiro slide
+activateDot(0);
+///////////////////////////////////////////////
+
+//ativar os dots do slide
+dotContainer.addEventListener("click", function (event) {
+  if (event.target.classList.contains("dots__dot")) {
+    const { slide } = event.target.dataset;
+    goToSlide(slide);
+  }
+});
