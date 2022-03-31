@@ -369,7 +369,7 @@ const activateDot = function (slide) {
     .classList.add("dots__dot--active");
 };
 
-//colocando o valor zero para que o slide inicie no primeiro ponto e ficar visiveil que estamos nos primeiro slide
+//colocando o valor zero para que o slide inicie no primeiro ponto e ficar visivel que estamos nos primeiro slide
 activateDot(0);
 ///////////////////////////////////////////////
 
