@@ -294,7 +294,6 @@ imgTargets.forEach((img) => imgObserver.observe(img));
 const slides = document.querySelectorAll(".slide");
 const btnLeft = document.querySelector(".slider__btn--left");
 const btnRight = document.querySelector(".slider__btn--right");
-const dotContainer = document.querySelector(".dots");
 
 //aqui será 100 * o index porque é o valor que precisamos
 
